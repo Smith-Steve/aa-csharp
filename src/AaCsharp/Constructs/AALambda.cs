@@ -14,7 +14,6 @@ namespace AaCsharp.Constructs
     {
 
         public Function Handler { get; }
-        public Function Handler2 { get; }
 
         public AALambda(Construct scope, string nameId, AADynamoDBTableCreator table) : base(scope, nameId)
         {

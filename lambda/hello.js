@@ -8,8 +8,6 @@ exports.handler = async function (event) {
     const lambda = new Lambda();
 
     // update dynamo entry for "path" with hits++
-    console.log("PRINT OUT NEW LINE HERE: ")
-    console.log(process.env)
     await dynamo.updateItem({
         TableName: process.env.HITS_TABLE_NAME,
         Key: { path: { S: event.path } },
